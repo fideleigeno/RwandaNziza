@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Report</title>
+</head>
+<body>
+
+<h2>Customer Salary Report</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+    <th>Customer</th>
+    <th>Gross Salary</th>
+    <th>Tax (%)</th>
+    <th>Net Salary</th>
+</tr>
+
+<script>
+
+var Customer;
+var GrossSalary;
+var Tax;
+var NetSalary;
+
+function DisplaySalary()
+{
+    if (GrossSalary <= 0)
+    {
+        document.write("<tr>");
+        document.write("<td>" + Customer + "</td>");
+        document.write("<td colspan='3'>Invalid Gross Salary</td>");
+        document.write("</tr>");
+    }
+    else
+    {
+        if (GrossSalary <= 60000)
+        {
+            Tax = 0;
+        }
+        else if (GrossSalary <= 100000)
+        {
+            Tax = 0.10;
+        }
+        else if (GrossSalary <= 200000)
+        {
+            Tax = 0.20;
+        }
+        else
+        {
+            Tax = 0.30;
+        }
+
+        NetSalary = GrossSalary - (GrossSalary * Tax);
+
+        document.write("<tr>");
+        document.write("<td>" + Customer + "</td>");
+        document.write("<td>" + GrossSalary + "</td>");
+        document.write("<td>" + (Tax * 100) + "%</td>");
+        document.write("<td>" + NetSalary + "</td>");
+        document.write("</tr>");
+    }
+}
+
+Customer = prompt("Enter Customer 1 Name");
+GrossSalary = Number(prompt("Enter Customer 1 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 2 Name");
+GrossSalary = Number(prompt("Enter Customer 2 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 3 Name");
+GrossSalary = Number(prompt("Enter Customer 3 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 4 Name");
+GrossSalary = Number(prompt("Enter Customer 4 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 5 Name");
+GrossSalary = Number(prompt("Enter Customer 5 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 6 Name");
+GrossSalary = Number(prompt("Enter Customer 6 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 7 Name");
+GrossSalary = Number(prompt("Enter Customer 7 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 8 Name");
+GrossSalary = Number(prompt("Enter Customer 8 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 9 Name");
+GrossSalary = Number(prompt("Enter Customer 9 Gross Salary"));
+DisplaySalary();
+
+Customer = prompt("Enter Customer 10 Name");
+GrossSalary = Number(prompt("Enter Customer 10 Gross Salary"));
+DisplaySalary();
+
+</script>
+
+</table>
+
+</body>
+</html>
