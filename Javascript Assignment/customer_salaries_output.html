@@ -1,59 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Salary Report</title>
+    <title>Employee Salary Report</title>
+
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container
+        {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        h2
+        {
+            text-align: center;
+            color: darkblue;
+        }
+
+        table
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th
+        {
+            background-color: darkblue;
+            color: white;
+            padding: 12px;
+        }
+
+        td
+        {
+            text-align: center;
+            padding: 10px;
+        }
+
+        tr:nth-child(even)
+        {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover
+        {
+            background-color: #d9edf7;
+        }
+
+        h3
+        {
+            text-align: center;
+            color: green;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Customer Salary Report</h2>
+<div class="container">
 
-<table border="1" cellpadding="10">
+<h2>Employee Salary Report</h2>
+
+<table border="1">
+
 <tr>
-    <th>Customer</th>
-    <th>Gross Salary</th>
+    <th>Employee Name</th>
+    <th>Gross Salary (FRW)</th>
     <th>Tax (%)</th>
-    <th>Net Salary</th>
+    <th>Net Salary (FRW)</th>
 </tr>
 
 <script>
 
-var Customer;
+var Employee;
 var GrossSalary;
 var Tax;
 var NetSalary;
+var NumberOfEmployees;
+var i;
 
 function DisplaySalary()
 {
     if (GrossSalary <= 0)
     {
         document.write("<tr>");
-        document.write("<td>" + Customer + "</td>");
+        document.write("<td>" + Employee + "</td>");
         document.write("<td colspan='3'>Invalid Gross Salary</td>");
         document.write("</tr>");
     }
     else
     {
-        if (GrossSalary <= 60000)
-        {
-            Tax = 0;
-        }
-        else if (GrossSalary <= 100000)
-        {
-            Tax = 0.10;
-        }
-        else if (GrossSalary <= 200000)
+        if (GrossSalary > 100000)
         {
             Tax = 0.20;
         }
         else
         {
-            Tax = 0.30;
+            Tax = 0;
         }
 
         NetSalary = GrossSalary - (GrossSalary * Tax);
 
         document.write("<tr>");
-        document.write("<td>" + Customer + "</td>");
+        document.write("<td>" + Employee + "</td>");
         document.write("<td>" + GrossSalary + "</td>");
         document.write("<td>" + (Tax * 100) + "%</td>");
         document.write("<td>" + NetSalary + "</td>");
@@ -61,49 +121,24 @@ function DisplaySalary()
     }
 }
 
-Customer = prompt("Enter Customer 1 Name");
-GrossSalary = Number(prompt("Enter Customer 1 Gross Salary"));
-DisplaySalary();
+NumberOfEmployees = Number(prompt("Enter Number of Employees"));
 
-Customer = prompt("Enter Customer 2 Name");
-GrossSalary = Number(prompt("Enter Customer 2 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 3 Name");
-GrossSalary = Number(prompt("Enter Customer 3 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 4 Name");
-GrossSalary = Number(prompt("Enter Customer 4 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 5 Name");
-GrossSalary = Number(prompt("Enter Customer 5 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 6 Name");
-GrossSalary = Number(prompt("Enter Customer 6 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 7 Name");
-GrossSalary = Number(prompt("Enter Customer 7 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 8 Name");
-GrossSalary = Number(prompt("Enter Customer 8 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 9 Name");
-GrossSalary = Number(prompt("Enter Customer 9 Gross Salary"));
-DisplaySalary();
-
-Customer = prompt("Enter Customer 10 Name");
-GrossSalary = Number(prompt("Enter Customer 10 Gross Salary"));
-DisplaySalary();
+for(i = 1; i <= NumberOfEmployees; i++)
+{
+    Employee = prompt("Enter Employee " + i + " Name");
+    GrossSalary = Number(prompt("Enter Employee " + i + " Gross Salary"));
+    DisplaySalary();
+}
 
 </script>
 
 </table>
+
+<br>
+
+<h3>End of Employee Salary Report</h3>
+
+</div>
 
 </body>
 </html>
