@@ -1,16 +1,23 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RwandaFix - Report Problem</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../Css/style.css">
+    <title>RwandaFix | Report Problem</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,86 +25,172 @@
 
 <div class="main-background">
 
-<nav>
+    <!-- Navigation -->
 
-<div class="logo">
-RwandaFix
+    <nav>
+
+        <div class="logo">
+            RwandaFix
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="report.html">Report Problem</a>
+
+            <a href="about.html">About Us</a>
+
+        </div>
+
+    </nav>
+
+    <div class="page-container">
+
+        <div class="glass-card">
+
+            <h1>Report Infrastructure Problems</h1>
+
+            <p class="page-description">
+
+                Help improve Rwanda by reporting damaged roads,
+                water leaks, electric problems, broken street lights,
+                flooding and other public infrastructure issues.
+
+            </p>
+
+            <!-- Live Time -->
+
+            <h3>Current Date & Time</h3>
+
+            <p id="currentTime"></p>
+
+            <br>
+
+            <!-- Report Counter -->
+
+            <h3>Total Submitted Reports</h3>
+
+            <h2 id="reportCounter">0</h2>
+
+            <br>
+
+            <!-- Report Form -->
+
+            <form id="reportForm">
+
+                <label for="fullname">Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Enter your full name"
+                    required>
+
+                <label for="phone">Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+2507XXXXXXXX"
+                    required>
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                    required>
+
+                <label for="problemType">Problem Type</label>
+
+                <select id="problemType" required>
+
+                    <option value="">Select Problem Type</option>
+
+                    <option>Damaged Road</option>
+
+                    <option>Broken Water Pipe</option>
+
+                    <option>Electric Line Damage</option>
+
+                    <option>Flooding</option>
+
+                    <option>Broken Street Light</option>
+
+                    <option>Bridge Damage</option>
+
+                    <option>Garbage Problem</option>
+
+                    <option>Other</option>
+
+                </select>
+
+                <label for="district">District</label>
+
+                <input
+                    type="text"
+                    id="district"
+                    placeholder="Enter District"
+                    required>
+
+                <label for="sector">Sector</label>
+
+                <input
+                    type="text"
+                    id="sector"
+                    placeholder="Enter Sector"
+                    required>
+
+                <label for="cell">Cell</label>
+
+                <input
+                    type="text"
+                    id="cell"
+                    placeholder="Enter Cell"
+                    required>
+
+                <label for="image">Upload Image</label>
+
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                    required>
+
+                <label for="description">Problem Description</label>
+
+                <textarea
+                    id="description"
+                    rows="6"
+                    maxlength="300"
+                    placeholder="Describe the problem clearly..."
+                    required></textarea>
+
+                <p id="charCount">0 / 300 characters</p>
+
+                <button type="submit">
+
+                    Submit Report
+
+                </button>
+
+                <p id="successMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="report.html">Report Problem</a>
-<a href="about.html">About Us</a>
-</div>
+<!-- JavaScript -->
 
-</nav>
-
-<div class="page-container">
-
-<div class="glass-card">
-
-<h1>Report Infrastructure Problems</h1>
-
-<p class="page-description">
-Help improve Rwanda by reporting damaged roads,
-water leaks, electric problems and public infrastructure issues.
-</p>
-
-<form>
-
-<label>Full Name</label>
-<input type="text" placeholder="Enter your full name" required>
-
-<label>Phone Number</label>
-<input type="tel" placeholder="+2507..." required>
-
-<label>Email Address</label>
-<input type="email" placeholder="example@gmail.com" required>
-
-<label>Problem Type</label>
-
-<select required>
-
-<option value="">Select Problem Type</option>
-
-<option>Damaged Road</option>
-<option>Broken Water Pipe</option>
-<option>Electric Line Damage</option>
-<option>Flooding</option>
-<option>Broken Street Light</option>
-<option>Bridge Damage</option>
-<option>Garbage Problem</option>
-<option>Other</option>
-
-</select>
-
-<label>District</label>
-<input type="text" placeholder="Enter District" required>
-
-<label>Sector</label>
-<input type="text" placeholder="Enter Sector" required>
-
-<label>Cell</label>
-<input type="text" placeholder="Enter Cell" required>
-
-<label>Upload Image</label>
-<input type="file" required>
-
-<label>Description</label>
-
-<textarea rows="5" placeholder="Describe the problem clearly"></textarea>
-
-<button type="submit">
-Submit Report
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
+<script src="../Javascript/script.js"></script>
 
 </body>
+
 </html>
+```
