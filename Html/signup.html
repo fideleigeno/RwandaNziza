@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rwanda Nziza | Sign Up</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+<header class="page-header">
+    <nav>
+        <a class="logo" href="index.html"><img src="../Media/logo.png" alt="Rwanda Nziza"></a>
+        <button class="menu-button" id="menuButton">Menu</button>
+        <div class="links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="institutions.html">Institutions</a>
+            <a href="report.html">Report a Problem</a>
+            <a href="reports.html">My Reports</a>
+            <a href="about.html">About</a>
+            <a id="loginLink" href="login.html">Login</a>
+            <a class="active" id="signupLink" href="signup.html">Sign Up</a>
+            <a href="#" id="logoutLink">Logout</a>
+            <span id="userName"></span>
+        </div>
+    </nav>
+    <div class="page-title"><p class="green-text">NEW ACCOUNT</p><h1>Create your account</h1><p>Use your details to register and track your reports.</p></div>
+</header>
+<main class="section"><div class="account-box"><h2>Sign Up</h2><form id="signupForm" class="account-form"><label for="signupFullName">Full Name</label><input type="text" id="signupFullName" required><label for="signupPhone">Phone Number</label><input type="text" id="signupPhone" placeholder="+250 7XX XXX XXX" required><label for="signupEmail">Email Address</label><input type="email" id="signupEmail" required><label for="signupPassword">Password</label><input type="password" id="signupPassword" required><label for="confirmPassword">Confirm Password</label><input type="password" id="confirmPassword" required><button type="submit">Create Account</button><p id="signupMessage"></p><p>Already registered? <a href="login.html">Login here.</a></p></form></div></main>
+<footer>
+    <img src="../Media/logo.png" alt="Rwanda Nziza">
+    <p>Citizen reporting for a better Rwanda.</p>
+    <p>© <span id="year"></span> Rwanda Nziza</p>
+    <p id="dateTime"></p>
+</footer>
+<script src="../JavaScript/script.js"></script>
+</body>
+</html>

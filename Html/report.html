@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rwanda Nziza | Report a Problem</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+<header class="page-header">
+    <nav>
+        <a class="logo" href="index.html"><img src="../Media/logo.png" alt="Rwanda Nziza"></a>
+        <button class="menu-button" id="menuButton">Menu</button>
+        <div class="links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="institutions.html">Institutions</a>
+            <a class="active" href="report.html">Report a Problem</a>
+            <a href="reports.html">My Reports</a>
+            <a href="about.html">About</a>
+            <a id="loginLink" href="login.html">Login</a>
+            <a id="signupLink" href="signup.html">Sign Up</a>
+            <a href="#" id="logoutLink">Logout</a>
+            <span id="userName"></span>
+        </div>
+    </nav>
+    <div class="page-title"><p class="green-text">CITIZEN REPORT</p><h1>Tell us what needs attention</h1><p>Complete the form with clear and accurate information.</p></div>
+</header>
+<main class="section">
+    <div class="form-area">
+        <div class="form-info">
+            <p class="green-text">MAKE A DIFFERENCE</p>
+            <h2>Your report can help improve your community.</h2>
+            <p>Provide the location, problem category and a short description. The information can then be directed to the responsible authority.</p>
+            <div class="report-count"><strong id="reportCounter">0</strong><p>reports saved on this device</p></div>
+            <p class="small-note">Log in before submitting to see this report later on the My Reports page.</p>
+        </div>
+        <form id="reportForm">
+            <label for="fullname">Full Name</label><input type="text" id="fullname" required>
+            <label for="phone">Phone Number</label><input type="text" id="phone" placeholder="+250 7XX XXX XXX" required>
+            <label for="email">Email Address</label><input type="email" id="email" required>
+            <label for="problemType">Problem Type</label>
+            <select id="problemType" required><option value="">Choose a problem</option><option>Damaged Road</option><option>Broken Water Pipe</option><option>Electricity Problem</option><option>Flooding</option><option>Broken Street Light</option><option>Bridge Damage</option><option>Garbage Problem</option><option>Environmental Problem</option><option>Other</option></select>
+            <label for="institution">Responsible Institution</label>
+            <select id="institution" required><option value="">Choose an institution</option>
+                <option>Ministry of Infrastructure</option>
+                <option>Rwanda Transport Development Agency</option>
+                <option>Water and Sanitation Corporation</option>
+                <option>Rwanda Energy Group</option>
+                <option>Rwanda Environment Management Authority</option>
+                <option>Ministry of Environment</option>
+                <option>City of Kigali</option>
+                <option>Rwanda National Police</option>
+                <option>Rwanda Utilities Regulatory Authority</option>
+                <option>Ministry of Local Government</option>
+                <option>Rwanda Governance Board</option>
+                <option>Ministry of Health</option>
+                <option>Ministry of Education</option>
+                <option>Rwanda Basic Education Board</option>
+                <option>National Examination and School Inspection Authority</option>
+                <option>Ministry of Agriculture and Animal Resources</option>
+                <option>Rwanda Agriculture and Animal Resources Development Board</option>
+                <option>Ministry of Finance and Economic Planning</option>
+                <option>Rwanda Revenue Authority</option>
+                <option>Rwanda Social Security Board</option>
+                <option>Rwanda Development Board</option>
+                <option>Ministry of Trade and Industry</option>
+                <option>Ministry of Justice</option>
+                <option>Ministry of Gender and Family Promotion</option>
+                <option>Rwanda Information Society Authority</option>
+                <option>National Identification Agency</option>
+                <option>Rwanda Biomedical Centre</option>
+                <option>Rwanda Forestry Authority</option>
+                <option>District Authority</option>
+                <option>Other</option>
+            </select>
+            <label for="district">District</label><input type="text" id="district" required>
+            <label for="sector">Sector</label><input type="text" id="sector" required>
+            <label for="cell">Cell</label><input type="text" id="cell" required>
+            <label for="image">Upload Image</label><input type="file" id="image" accept="image/*">
+            <label for="description">Problem Description</label><textarea id="description" rows="6" maxlength="300" required></textarea>
+            <p id="charCount">0 / 300 characters</p>
+            <button type="submit">Submit Report</button><p id="successMessage"></p>
+        </form>
+    </div>
+</main>
+<footer>
+    <img src="../Media/logo.png" alt="Rwanda Nziza">
+    <p>Citizen reporting for a better Rwanda.</p>
+    <p>© <span id="year"></span> Rwanda Nziza</p>
+    <p id="dateTime"></p>
+</footer>
+<script src="../JavaScript/script.js"></script>
+</body>
+</html>
