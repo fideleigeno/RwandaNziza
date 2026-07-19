@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222222;
+    background: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-header,
+.page-header {
+    color: white;
+    background-image: url('../Media/homegg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home-header {
+    min-height: 760px;
+}
+
+.page-header {
+    min-height: 390px;
+}
+
+.about-header {
+    background-image: url('../Media/homegg.jpg');
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    width: 210px;
+}
+
+.links {
+    float: right;
+    padding-top: 15px;
+}
+
+.links a,
+.links span {
+    color: white;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.links a:hover,
+.links .active {
+    color: #8bd36f;
+}
+
+#logoutLink,
+#userName {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+.header-text,
+.page-title {
+    width: 86%;
+    margin: auto;
+}
+
+.header-text {
+    padding-top: 120px;
+}
+
+.header-text h1 {
+    font-size: 58px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.header-text p {
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    padding-top: 75px;
+}
+
+.page-title h1 {
+    font-size: 44px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.page-title p {
+    line-height: 1.6;
+}
+
+.green-text {
+    color: #83d267;
+    font-weight: bold;
+}
+
+.button,
+.light-button,
+.white-button,
+button {
+    display: inline-block;
+    padding: 13px 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.button,
+button {
+    background: #55a640;
+    color: white;
+}
+
+.light-button {
+    color: white;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+
+.white-button {
+    background: white;
+    color: #397c2b;
+    margin-top: 15px;
+}
+
+.section {
+    width: 86%;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+.cards,
+.institution-list,
+.about-box,
+.form-area,
+.contact-box,
+.green-section,
+.reports-list {
+    overflow: hidden;
+}
+
+.card {
+    width: 27%;
+    min-height: 170px;
+    float: left;
+    margin: 1.5%;
+    padding: 20px;
+    background: white;
+}
+
+.card h3 {
+    color: #4f9f3d;
+    margin-bottom: 15px;
+}
+
+.card p,
+.institution-card p,
+.about-text p,
+.form-info p,
+.report-item p {
+    line-height: 1.7;
+}
+
+.green-section {
+    padding: 45px 8%;
+    background: #4f9f3d;
+    color: white;
+}
+
+.green-section div {
+    float: left;
+}
+
+.green-section a {
+    float: right;
+}
+
+.search-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 65%;
+    padding: 14px;
+}
+
+.institution-card {
+    width: 42%;
+    min-height: 155px;
+    float: left;
+    margin: 2%;
+    padding: 20px;
+    background: white;
+}
+
+.institution-card h3 {
+    margin-bottom: 10px;
+}
+
+.institution-card a,
+.account-form a,
+.reports-message a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #397c2b;
+    font-weight: bold;
+}
+
+#noInstitution {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.about-picture {
+    width: 45%;
+    height: 450px;
+    float: left;
+    margin-right: 5%;
+}
+
+.about-text {
+    width: 50%;
+    float: left;
+}
+
+.about-text h2,
+.form-info h2,
+.account-box h2 {
+    font-size: 34px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.about-text > p {
+    margin-bottom: 15px;
+}
+
+.value-box {
+    width: 42%;
+    min-height: 100px;
+    float: left;
+    margin-top: 18px;
+    margin-right: 3%;
+    padding: 15px;
+    background: white;
+    border-left: 4px solid #55a640;
+}
+
+.value-box h3 {
+    margin-bottom: 8px;
+}
+
+.contact-box {
+    clear: both;
+    margin-top: 55px;
+    padding: 30px;
+    background: #222222;
+    color: white;
+}
+
+.contact-box div:first-child {
+    float: left;
+}
+
+.contact-box div:last-child {
+    float: right;
+}
+
+.form-info {
+    width: 34%;
+    float: left;
+    padding-right: 5%;
+}
+
+.report-count {
+    margin-top: 25px;
+    padding: 20px;
+    background: #e5f3e1;
+}
+
+.report-count strong {
+    color: #397c2b;
+    font-size: 35px;
+}
+
+.small-note {
+    margin-top: 18px;
+    color: #666666;
+}
+
+form {
+    width: 55%;
+    float: left;
+    background: white;
+    padding: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 95%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    font-family: Arial, sans-serif;
+}
+
+input[type="file"] {
+    background: white;
+}
+
+#charCount {
+    text-align: right;
+    margin-top: 5px;
+    color: #666666;
+}
+
+form button {
+    margin-top: 18px;
+}
+
+#successMessage,
+#loginMessage,
+#signupMessage {
+    color: #397c2b;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.account-box {
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.account-form {
+    width: auto;
+    float: none;
+}
+
+.account-form p {
+    margin-top: 15px;
+}
+
+.reports-message {
+    text-align: center;
+    padding: 25px;
+    background: white;
+}
+
+.report-item {
+    width: 42%;
+    min-height: 250px;
+    float: left;
+    margin: 2%;
+    padding: 20px;
+    background: white;
+    border-top: 5px solid #55a640;
+}
+
+.report-item h3 {
+    margin-bottom: 12px;
+}
+
+.status {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    background: #fff1c7;
+    color: #7a5b00;
+    font-weight: bold;
+}
+
+footer {
+    clear: both;
+    background: #181818;
+    color: #dddddd;
+    text-align: center;
+    padding: 30px;
+    line-height: 1.8;
+}
+
+footer img {
+    width: 190px;
+}
+
+@media screen and (max-width: 900px) {
+    .logo,
+    .links,
+    .card,
+    .institution-card,
+    .about-picture,
+    .about-text,
+    .value-box,
+    .form-info,
+    form,
+    .green-section div,
+    .green-section a,
+    .contact-box div:first-child,
+    .contact-box div:last-child,
+    .report-item {
+        float: none;
+        width: auto;
+    }
+
+    .menu-button {
+        display: block;
+        float: right;
+        margin-top: 5px;
+    }
+
+    .links {
+        display: none;
+        clear: both;
+        padding-top: 20px;
+    }
+
+    .links.show {
+        display: block;
+    }
+
+    .links a,
+    .links span {
+        display: block;
+        margin: 12px 0;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .page-title h1 {
+        font-size: 35px;
+    }
+
+    .card,
+    .institution-card,
+    .value-box,
+    .report-item {
+        margin: 15px 0;
+    }
+
+    .about-picture {
+        width: 100%;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .form-info {
+        margin-bottom: 25px;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+
+    .green-section a {
+        margin-top: 20px;
+    }
+
+    .contact-box div:last-child {
+        margin-top: 20px;
+    }
+}
